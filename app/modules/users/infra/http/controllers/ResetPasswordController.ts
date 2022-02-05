@@ -6,8 +6,9 @@ import ResetPasswordEmailService from '@modules/users/services/ResetPasswordServ
 
 // index, show, create, update, delete
 export default class ResetPasswordController {
-    
+
     public async create(request: Request, response: Response): Promise<Response> {
+        
         const { password, token } = request.body;
 
         const resetPassword = container.resolve(ResetPasswordEmailService);

@@ -37,11 +37,14 @@
 - [x] Banco Relacional (MySQL, MariaDB, PostgreSQL)
 - [ ] Banco Não Relacional (MongoDB)
 - [x] Usar algum (Postman, Insomnia, Swagger) 
-- [ ] Autenticação JWT com formato "Bearer token"
+- [x] Autenticação JWT com formato "Bearer token"
 - [x] Javascript ou Typescript
 
 ### Gerenciamento de Usuários
 
 - usuário pode se cadastrar no sistema
 - usuário deve ser único, utilizando o email como referência. Se já existir um email, deve ser impedido de fazer cadastro.
+- usuário pode solicitar redefinição de senha
+- usuário pode resetar sua senha 
+- usuário pode verificar o seus dados de perfil
 
