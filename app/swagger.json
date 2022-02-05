@@ -1,0 +1,54 @@
+{
+    "openapi": "3.0.0",
+    "info" : {
+        "title": "Test Backend Documentation",
+        "description": "This is an API developed by Adller",
+        "version": "1.0.0",
+        "contact": {
+            "email": "adller.eel.ufsc@gmail.com"
+        }
+    },
+    "paths": {
+        "/users": {
+            "post": {
+                "tags": ["User"],
+                "summary": "Create User",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                       "type": "string" 
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                    
+                                },
+                                "example": {
+                                    "name": "Example Name",   
+                                    "email":  "example@gmail.com",
+                                    "password": "123123"
+                                }
+                            }
+                        }
+                    }
+                }
+            }, 
+            "responses": {
+                "201": {
+                    "description": "Created"
+                },
+                "500": {
+                    "description": "User already exists"
+                }
+            }
+        }
+    }
+}
