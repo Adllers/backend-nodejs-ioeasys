@@ -2,6 +2,9 @@
 
 # Rodar o Projeto
 
+- instalar as dependências do projeto
+    yarn install
+
 - utilizando a última versão do postgresql com docker
     docker run --name ioeasys_postgres -e POSTGRES_PASSWORD=ioeasys -p 5432:5432 -d postgres
     
@@ -14,7 +17,7 @@
     - Username: postgres
     - Password: ioeasys
 
-    Criar banco de dado na ferramenta de acesso ao Banco de Dados
+    Criar banco de dados na ferramenta de acesso ao Banco de Dados
     - nome do Banco de Dados: ioeasys_postgres
 
 
@@ -28,8 +31,8 @@
 - [x] Api construída em NodeJS
 - [x] ExpressJS
 - [x] API REST
-- [ ] Utilizar algum ORM (Sequelize, TypeORM, Mongoose, etc...)
-- [ ] Banco Relacional (MySQL, MariaDB, PostgreSQL)
+- [x] Utilizar algum ORM (Sequelize, TypeORM, Mongoose, etc...)
+- [x] Banco Relacional (MySQL, MariaDB, PostgreSQL)
 - [ ] Banco Não Relacional (MongoDB)
 - [ ] Usar algum (Postman, Insomnia, Swagger) 
 - [ ] Autenticação JWT com formato "Bearer token"
