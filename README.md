@@ -24,7 +24,9 @@
 - comando para inicializar o servidor expressJS
     > **yarn dev**
 
+### Consulta de API
 
+- http://localhost:3333/api-docs
 
 ### Requisitos Não Funcionais
 
@@ -34,6 +36,7 @@
 - [x] Utilizar algum ORM (Sequelize, TypeORM, Mongoose, etc...)
 - [x] Banco Relacional (MySQL, MariaDB, PostgreSQL)
 - [ ] Banco Não Relacional (MongoDB)
-- [ ] Usar algum (Postman, Insomnia, Swagger) 
+- [x] Usar algum (Postman, Insomnia, Swagger) 
 - [ ] Autenticação JWT com formato "Bearer token"
 - [x] Javascript ou Typescript
+
