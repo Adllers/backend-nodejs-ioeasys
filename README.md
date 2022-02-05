@@ -40,3 +40,8 @@
 - [ ] Autenticação JWT com formato "Bearer token"
 - [x] Javascript ou Typescript
 
+### Gerenciamento de Usuários
+
+- usuário pode se cadastrar no sistema
+- usuário deve ser único, utilizando o email como referência. Se já existir um email, deve ser impedido de fazer cadastro.
+
