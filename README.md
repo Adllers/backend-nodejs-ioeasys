@@ -1,12 +1,12 @@
-# TESTE IOEASYS
+# TESTE
 
-#### Rodar o Projeto
+### Rodar o Projeto
 
 - instalar as dependências do projeto
-    > *yarn install*
+    *yarn install*
 
 - utilizando a última versão do postgresql com docker
-    > *docker run --name ioeasys_postgres -e POSTGRES_PASSWORD=ioeasys -p 5432:5432 -d postgres*
+    *docker run --name ioeasys_postgres -e POSTGRES_PASSWORD=ioeasys -p 5432:5432 -d postgres*
     
     obs: A porta 5432 do seu sistema precisa estar disponível
 
@@ -22,11 +22,11 @@
 
 
 - comando para inicializar o servidor expressJS
-    > *yarn dev*
+    *yarn dev*
 
 
 
-# Requisitos Não Funcionais
+### Requisitos Não Funcionais
 
 - [x] Api construída em NodeJS
 - [x] ExpressJS
