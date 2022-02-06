@@ -42,9 +42,9 @@
 
 ### Gerenciamento de Usuários
 
-- usuário pode se cadastrar no sistema
+- usuário pode se cadastrar no sistema.
 - usuário deve ser único, utilizando o email como referência. Se já existir um email, deve ser impedido de fazer cadastro.
-- usuário pode solicitar redefinição de senha
-- usuário pode resetar sua senha 
-- usuário pode verificar o seus dados de perfil
+- usuário pode solicitar redefinição de senha.
+- usuário pode resetar sua senha. 
+- usuário pode verificar o seus dados de perfil.
 
