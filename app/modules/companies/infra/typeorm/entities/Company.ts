@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 
 //Vamos relacionar esse model com a tabela do typeorm
 @Entity('companies')
-class Companies {
+class Company {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;
@@ -22,4 +22,4 @@ class Companies {
 
 }
 
-export default Companies;
+export default Company;

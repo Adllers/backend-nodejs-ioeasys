@@ -7,7 +7,7 @@
         "password": "ioeasys",
         "database": "ioeasys_postgres",
         "entities": [
-            "./app/modules/users/infra/typeorm/entities/*.ts"
+            "./app/modules/**/infra/typeorm/entities/*.ts"
         ],
         "migrations": [
             "./app/shared/infra/typeorm/migrations/*.ts"

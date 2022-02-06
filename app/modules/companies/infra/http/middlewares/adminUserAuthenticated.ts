@@ -10,7 +10,7 @@ interface TokenPayload {
     sub: string;
 }
 
-export default function userAuthenticated(
+export default function adminUserAuthenticated(
     request: Request, 
     response: Response, 
     next: NextFunction
@@ -42,7 +42,9 @@ export default function userAuthenticated(
         return next();
 
     } catch {
+
         throw new Errors('Invalid JWT token', 401);
+
     }
 
 }
