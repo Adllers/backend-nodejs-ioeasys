@@ -40,11 +40,13 @@
 - [x] Autenticação JWT com formato "Bearer token"
 - [x] Javascript ou Typescript
 
-### Gerenciamento de Usuários
+### Gerenciamento de Empresas e Usuários
+- Usuário admin pode se cadastrar no sistema.
+- Usuário admin pode criar uma única empresa ao qual ele será o administrador.
+- A empresa deve ser única e terá os usuários vinculados a ela através do cadastro feito pelo Usuário admin
 
-- usuário pode se cadastrar no sistema.
 - usuário deve ser único, utilizando o email como referência. Se já existir um email, deve ser impedido de fazer cadastro.
 - usuário pode solicitar redefinição de senha.
 - usuário pode resetar sua senha. 
-- usuário pode verificar o seus dados de perfil.
+- usuário pode verificar os seus dados de perfil.
 
