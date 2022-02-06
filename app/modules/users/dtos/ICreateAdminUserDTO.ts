@@ -1,7 +1,6 @@
-export default interface ICreateUserDTO {
+export default interface ICreateAdminUserDTO {
     name: string;
     email: string;
     password: string;
     is_admin?: boolean; 
-    company_id: string;
 }

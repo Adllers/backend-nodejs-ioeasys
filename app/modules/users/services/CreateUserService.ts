@@ -10,6 +10,7 @@ interface IRequest {
     name: string;
     email: string;
     password: string;
+    user_id: string;
 }
 
 @injectable()
@@ -25,8 +26,23 @@ class CreateUserService {
  
     ) {};
 
-    public async execute({ name, email, password }: IRequest): Promise<User | undefined> {
+    public async execute({ name, email, password, user_id }: IRequest): Promise<User | undefined> {
 
+        const userAdmin = await this.usersRepository.findById(user_id);
+
+        if (!userAdmin) {
+            throw new Errors('User not found', 400);
+        }
+
+        if (!userAdmin.is_admin) {
+            throw new Errors('No permission to register user', 403);
+        }
+
+        if(!userAdmin.company_id) {
+            throw new Errors('Register a company first', 403);
+        }
+
+        // verificando se usuário comum não possui email cadastrado
         const checkUserExists = await this.usersRepository.findByEmail(email);
 
         if (checkUserExists) {
@@ -39,6 +55,7 @@ class CreateUserService {
             name,
             email,
             password: hashedPassword,
+            company_id: userAdmin.company_id,
         });
         
         return user;

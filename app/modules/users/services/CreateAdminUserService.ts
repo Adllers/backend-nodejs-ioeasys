@@ -35,11 +35,11 @@ class CreateAdminUserService {
 
         const hashedPassword = await this.hashProvider.generateHash(password);
 
-        const user = await this.usersRepository.create({
+        const user = await this.usersRepository.createAdmin({
             name,
             email,
             password: hashedPassword,
-            is_admin: true
+            is_admin: true,
         });
         
         return user;

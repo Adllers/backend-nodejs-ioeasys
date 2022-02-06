@@ -1,7 +1,8 @@
-import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import User from '../entities/User';
 import { getRepository, Repository } from 'typeorm';
 import ICreateUserDTO from '@modules/users/dtos/ICreateUserDTO';
+import ICreateAdminUserDTO from '@modules/users/dtos/ICreateAdminUserDTO';
+import IUsersRepository from '@modules/users/repositories/IUsersRepository';
+import User from '../entities/User';
 
 
 class UsersRepository implements IUsersRepository {
@@ -29,6 +30,16 @@ class UsersRepository implements IUsersRepository {
     }
 
     public async create(userData: ICreateUserDTO): Promise<User> {
+
+        const user = this.ormRepository.create(userData);
+
+        await this.ormRepository.save(user);
+
+        return user;
+
+    }
+
+    public async createAdmin(userData: ICreateAdminUserDTO): Promise<User> {
 
         const user = this.ormRepository.create(userData);
 

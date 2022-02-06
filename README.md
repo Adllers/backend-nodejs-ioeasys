@@ -43,6 +43,7 @@
 ### Gerenciamento de Empresas e Usuários
 - Usuário admin pode se cadastrar no sistema.
 - Usuário admin pode criar uma única empresa ao qual ele será o administrador.
+- O Usuário admin deve cadastrar uma empresa antes de cadastrar os funcionários.
 - A empresa deve ser única e terá os usuários vinculados a ela através do cadastro feito pelo Usuário admin
 
 - usuário deve ser único, utilizando o email como referência. Se já existir um email, deve ser impedido de fazer cadastro.
