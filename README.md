@@ -84,7 +84,7 @@ observações:
 - O caminho feliz pode ser executado na sequência 1, 2, 3 e 4
  
 
-###### 1 - Criar Usuário Admin
+#### 1 - Criar Usuário Admin
 
 - não autenticada, como já explicado nas observações
 
@@ -95,7 +95,7 @@ observações:
 - Body -> JSON -> { "name": "digitealgum", "email" : "digitealgum@teste.com", "password": "digitealgum" }
 - retorna usuário admin
 
-###### 2 - Autenticar Usuário Admin
+#### 2 - Autenticar Usuário Admin
 
 - não autenticada
 
@@ -108,7 +108,7 @@ observações:
 
 
 
-###### 3 - Criar empresa por usuário Admin
+#### 3 - Criar empresa por usuário Admin
 
 - autenticada por usuário admin
 
@@ -120,7 +120,7 @@ observações:
 - retorna a empresa
 
 
-###### 4 - Criar usuário comum (usuário não admin)
+#### 4 - Criar usuário comum 
 
 - autenticada por usuário admin
 
@@ -131,7 +131,7 @@ observações:
 - Body -> JSON -> { "name": "digitealgumusuariocomum", "email" : "digitealgumusuariocomum@test.com", "password": "digitealgumusuariocomum" }
 - retorna usuário não admin
 
-###### 5 - Ver dados de Perfil
+#### 5 - Ver dados de Perfil
 
 - autenticada por qualquer usuário 
 
@@ -143,7 +143,7 @@ observações:
 - retorna usuário
 
 
-###### 6 - Atualizar perfil de usuário
+#### 6 - Atualizar perfil de usuário
 
 - autenticada por qualquer usuário 
 
@@ -156,7 +156,7 @@ observações:
 - retorna usuário
 
 
-###### 7 - Obter usuários da empresa do usuário admin
+#### 7 - Obter usuários da empresa do usuário admin
 
 - autenticada com usuário admin 
 
@@ -168,7 +168,7 @@ observações:
 - retorna array de usuários
 
 
-###### 8 - Pedir alteração de senha
+#### 8 - Pedir alteração de senha
 
 - não autenticada
 
@@ -180,7 +180,7 @@ observações:
 
 - No console.log é possível acessar o email através de um link. Sendo preciso pegar o token para mudar a senha.
 
-###### 9 - Mudar senha
+#### 9 - Mudar senha
 
 - não autenticada
 
