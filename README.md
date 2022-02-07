@@ -2,7 +2,7 @@
 
 ### API em NodeJS para Teste
 
-- Essa é uma API para gerenciamento de usuários e empresas que deverá cumprir os requisitos não funcionais do tópico abaixo 
+- Essa é uma API para um simples gerenciamento de usuários e empresas que visa prioritariamente cumprir os requisitos não funcionais exigidos para o teste.
 
 ### Requisitos Não Funcionais
 
@@ -25,13 +25,20 @@
 - Usuário não admin ou usuário admin pode atualizar os dados do seu perfil
 - Usuário admin ou usuário não admin pode ver o seu perfil
 - Usuário admin ou usuário não admin podem fazer login se autenticando
-- Usuário admin ou usuário não admin podem pedir recuperação de senha
+- Usuário admin ou usuário não admin podem pedir recuperação de senha através de seu email
 - Usuário admin ou usuário não admin podem modificar a senha após pedido de recuperação de senha
 
-### Algumas Regras de Negócio
+### Regras de Negócio
 
-
-
+- Usuário admin deve ser criado primeiro
+- Usuário admin deve criar primeiro uma empresa antes de cadastrar os funcionários dessa empresa
+- Quando usuário admin cadastrar uma empresa, ele deve ser o administrador da empresa
+- Usuário não admin só pode ser criado por usuário admin
+- Usuário não admin deve ser criado por usuário admin na mesma empresa em que o usuário admin está vinculado
+- O email será o validador de usuário e empresa única
+- Qualquer usuário não pode ser criado se já existir um email
+- Ao atualizar o perfil de usuário, o usuário não pode alterar seu email para um email já existente
+- Ao atualizar a sua senha, o usuário deve informar a senha antiga e a nova senha
 
 
 ### Rodar o Projeto
