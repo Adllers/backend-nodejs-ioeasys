@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 
 
 import CreateCompanyByAdminService from '@modules/companies/services/CreateCompanyByAdminService';
-
+import GetUsersFromCompany from '@modules/companies/services/GetUsersFromCompany';
 
 // index, show, create, update, delete
 export default class CompaniesController {
@@ -25,4 +25,18 @@ export default class CompaniesController {
         return response.json(company);
     
     }
+
+    public async index(request: Request, response: Response): Promise<Response> {
+       
+        const user_id = request.user.id;
+ 
+        // injetando repositorio
+        const getUsers = container.resolve(GetUsersFromCompany);
+ 
+        const users = await getUsers.execute({
+            user_id, 
+        });
+ 
+        return response.json(users);
+    } 
 }

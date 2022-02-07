@@ -29,6 +29,28 @@ class UsersRepository implements IUsersRepository {
         return user;
     }
 
+    
+    public async findUsersByCompanyId(company_id: string): Promise<User[]> {
+        
+        let users: User[] = [];
+
+        if (company_id) {
+
+            users = await this.ormRepository.find({
+                where: {
+                    company_id
+                }
+            }); 
+
+            return users ;
+
+        } else {
+
+            return [];
+        
+        }
+    }
+
     public async create(userData: ICreateUserDTO): Promise<User> {
 
         const user = this.ormRepository.create(userData);

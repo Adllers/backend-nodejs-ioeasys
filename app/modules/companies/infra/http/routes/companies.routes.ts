@@ -12,4 +12,6 @@ companiesRouter.use(adminUserAuthenticated);
 //create user
 companiesRouter.post('/', companiesController.create);
 
+companiesRouter.get('/users', companiesController.index)
+
 export default companiesRouter;
