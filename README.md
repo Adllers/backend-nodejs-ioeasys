@@ -30,7 +30,7 @@
 
 ### Regras de Negócio
 
-- Usuário admin deve ser criado primeiro
+- Usuário admin deve ser criado antes da empresa e de um usuário comum
 - Usuário admin deve criar primeiro uma empresa antes de cadastrar os funcionários dessa empresa
 - Quando usuário admin cadastrar uma empresa, ele deve ser o administrador da empresa
 - Empresas cadastradas devem ser únicas
