@@ -3,6 +3,8 @@ import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateCol
 import Company from '@modules/companies/infra/typeorm/entities/Company';
 //Vamos relacionar esse model com a tabela do typeorm
 
+import { Exclude } from 'class-transformer';
+
 // Entidade de usuários
 @Entity('users')
 class User {
@@ -17,9 +19,11 @@ class User {
     email: string;
 
     @Column()
+    @Exclude()
     password: string;
 
     @Column()
+    @Exclude()
     is_admin: boolean;
 
     @CreateDateColumn()

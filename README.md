@@ -34,8 +34,7 @@
 - [x] ExpressJS
 - [x] API REST
 - [x] Utilizar algum ORM (Sequelize, TypeORM, Mongoose, etc...)
-- [x] Banco Relacional (MySQL, MariaDB, PostgreSQL)
-- [ ] Banco Não Relacional (MongoDB)
+- [x] Banco de Dados Relacionais Permitidos (MySQL, MariaDB, PostgreSQL)
 - [x] Usar algum (Postman, Insomnia, Swagger) 
 - [x] Autenticação JWT com formato "Bearer token"
 - [x] Javascript ou Typescript

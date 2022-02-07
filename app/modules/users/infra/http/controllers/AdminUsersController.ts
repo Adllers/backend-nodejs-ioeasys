@@ -3,6 +3,7 @@ import { container } from 'tsyringe';
 
 
 import CreateAdminUserService from '@modules/users/services/CreateAdminUserService';
+import { classToClass } from 'class-transformer';
 
 
 // index, show, create, update, delete
@@ -26,7 +27,7 @@ export default class AdminUsersController {
             user.password = '';    
         }
 
-        return response.json(user);
+        return response.json(classToClass(user));
     
     }
 }

@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { celebrate, Segments, Joi } from 'celebrate';
 
 import AdminUsersController from '../controllers/AdminUsersController';
 import UsersController from '../controllers/UsersController';
@@ -13,7 +14,13 @@ const usersRouter = Router();
 usersRouter.post('/', userAuthenticated , usersController.create);
 
 //create admin user
-usersRouter.post('/admin', adminUsersController.create);
+usersRouter.post('/admin', celebrate({
+    [Segments.BODY]: {
+        name: Joi.string().required(),
+        email: Joi.string().email().required(),
+        password: Joi.string().required(),
+    }
+}), adminUsersController.create);
 
 
 export default usersRouter;

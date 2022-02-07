@@ -4,6 +4,7 @@ import { container } from 'tsyringe';
 
 import CreateCompanyByAdminService from '@modules/companies/services/CreateCompanyByAdminService';
 import GetUsersFromCompany from '@modules/companies/services/GetUsersFromCompany';
+import { classToClass } from 'class-transformer';
 
 // index, show, create, update, delete
 export default class CompaniesController {
@@ -37,6 +38,6 @@ export default class CompaniesController {
             user_id, 
         });
  
-        return response.json(users);
+        return response.json(classToClass(users));
     } 
 }

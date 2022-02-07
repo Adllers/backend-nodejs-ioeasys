@@ -27,9 +27,13 @@ class GetUsersFromCompany {
             throw new Errors("User does not exist");
         }
 
-        if (!user.is_admin || !user.company_id) {
-            throw new Errors("User whithout permission");
+        if (!user.is_admin) {
+            throw new Errors("User whithout permission!");
         } 
+
+        if (!user.company_id) {
+            throw new Errors("User needs to create a company!");
+        }
 
         const users = await this.usersRepository.findUsersByCompanyId(user.company_id);
 
